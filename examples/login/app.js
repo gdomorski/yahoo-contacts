@@ -1,6 +1,5 @@
 var express = require('express')
   , passport = require('passport')
-  , util = require('util')
   , YahooStrategy = require('../../lib/passport-yahoo-contacts/index.js').Strategy
   , logger = require('morgan')
   , cookieParser = require('cookie-parser')
@@ -8,9 +7,8 @@ var express = require('express')
   , session = require('express-session');
 
 
-
-var YAHOO_CONSUMER_KEY = "dj0yJmk9Q1loYWVzYkxrTnNwJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTdl"
-var YAHOO_CONSUMER_SECRET = "f98d29abdcb48fae7f47d0887c0ae8d23e0ac653";
+var YAHOO_CONSUMER_KEY = "--insert-key-here--"
+var YAHOO_CONSUMER_SECRET = "--insert-secret-here--";
 
 
 // Passport session setup.
@@ -29,10 +27,6 @@ passport.deserializeUser(function(obj, done) {
 });
 
 
-// Use the YahooStrategy within Passport.
-//   Strategies in passport require a `verify` function, which accept
-//   credentials (in this case, a token, tokenSecret, and Yahoo profile), and
-//   invoke a callback with a user object.
 passport.use(new YahooStrategy({
   clientID: YAHOO_CONSUMER_KEY,
   clientSecret: YAHOO_CONSUMER_SECRET,
@@ -44,9 +38,6 @@ passport.use(new YahooStrategy({
     return done(null, profile, 'HELLO WORLD')
   }
 ));
-
-
-
 
 var app = express();
 
@@ -99,11 +90,7 @@ app.get('/auth/yahoo/callback',
     // The request will be redirected to Microsoft Graph for authentication, so
     // this function will not be called.
   }
-  ))
-
-
-
-
+))
 
 
 app.get('/logout', function(req, res){
