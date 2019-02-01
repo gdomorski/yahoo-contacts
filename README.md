@@ -1,4 +1,4 @@
-# Passport-Yahoo!-Contacts
+# Yahoo-Contacts
 
 [Passport](http://passportjs.org/) strategies for authenticating with [Yahoo!](http://www.yahoo.com/)
 using the OAuth 2.0 API.
@@ -11,7 +11,7 @@ unobtrusively integrated into any application or framework that supports
 
 ## Installation
 
-    $ npm install passport-yahoo!-oauth
+    $ npm install yahoo-contacts
 
 #### Configure Strategy
 
@@ -52,7 +52,7 @@ application:
 
 ## Examples
 
-For a complete, working example, refer to the [login example](https://github.com/gdomorski/passport-yahoo!-contacts/tree/master/examples/login).
+For a complete, working example, refer to the [login example](https://github.com/gdomorski/yahoo-contacts/tree/master/examples/login).
 
 ## Credits
   - [Greg Domorski](http:/github.com/gdomorski)
