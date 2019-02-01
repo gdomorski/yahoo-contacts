@@ -1,0 +1,43 @@
+{
+  "name": "yahoo-contacts",
+  "version": "0.0.1",
+  "description": "Yahoo! (OAuth) authentication strategy for Passport. Contacts Hack",
+  "keywords": [
+    "passport",
+    "yahoo",
+    "auth",
+    "authn",
+    "authentication",
+    "identity"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gdomorski/passport-yahoo!-contacts.git"
+  },
+  "author": {
+    "name": "Greg Domorski",
+    "email": "greg.domorski@gmail.com"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "./lib/passport-yahoo!-contacts",
+  "dependencies": {
+    "passport-oauth": "^1.0.0",
+    "passport-oauth2": "^1.4.0",
+    "pkginfo": "0.2.x",
+    "request": "2.x.x"
+  },
+  "devDependencies": {
+    "vows": "0.6.x"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  }
+}
+
+
+
