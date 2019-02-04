@@ -1,6 +1,6 @@
 var express = require('express')
   , passport = require('passport')
-  , YahooStrategy = require('../../lib/passport-yahoo-contacts/index.js').Strategy
+  , YahooStrategy = require('../../lib/yahoo-contacts/index.js').Strategy
   , logger = require('morgan')
   , cookieParser = require('cookie-parser')
   , bodyParser = require('body-parser')
