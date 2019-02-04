@@ -7,8 +7,9 @@ var express = require('express')
   , session = require('express-session');
 
 
-var YAHOO_CONSUMER_KEY = "--insert-key-here--"
-var YAHOO_CONSUMER_SECRET = "--insert-secret-here--";
+  var YAHOO_CONSUMER_KEY = "dj0yJmk9Q1loYWVzYkxrTnNwJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTdl"
+  var YAHOO_CONSUMER_SECRET = "f98d29abdcb48fae7f47d0887c0ae8d23e0ac653";
+  
 
 
 // Passport session setup.
@@ -84,13 +85,12 @@ app.get('/auth/yahoo',
 //   request.  If authentication fails, the user will be redirected back to the
 //   login page.  Otherwise, the primary route function function will be called,
 //   which, in this example, will redirect the user to the home page.
+
 app.get('/auth/yahoo/callback',
-  passport.authenticate('yahoo',
-  function(req, res){
-    // The request will be redirected to Microsoft Graph for authentication, so
-    // this function will not be called.
-  }
-))
+  passport.authenticate('yahoo'),
+  function(req, res) {
+    res.redirect('/');
+  });
 
 
 app.get('/logout', function(req, res){
