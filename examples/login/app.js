@@ -36,7 +36,7 @@ passport.use(new YahooStrategy({
   },
   function(request, token, tokenSecret, profile, done) {
     request.session.yahoo = { queryCode: request.query.code }
-    return done(null, profile, 'HELLO WORLD')
+    return done(null, profile)
   }
 ));
 
